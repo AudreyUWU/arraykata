@@ -1,0 +1,54 @@
+<html>
+<head>
+</head>
+
+<body>
+    <h2 id =kata></h2>
+    <h2 id =kata2></h2>
+    <h2 id =kata3></h2>
+    <h2 id =kata4></h2>
+    <h2 id =kata5></h2>
+    <h2 id =kata6></h2>
+    <h2 id =kata7></h2>
+    <h2 id =kata8></h2>
+    <h2 id =kata9></h2>
+    <h2 id =kata10></h2>
+<script>
+const gotCitiesCSV = "King's Landing,Braavos,Volantis,Old Valyria,Free Cities,Qarth,Meereen";
+const lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead Marshes","Rhun","Harad"];
+const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit"
+
+let tempArr=gotCitiesCSV.split(',')
+kata.textContent = JSON.stringify(gotCitiesCSV.split(','));
+
+kata2.textContent = JSON.stringify(bestThing.split(' '));
+
+kata3.textContent = JSON.stringify(tempArr.join('; '));
+
+kata4.textContent = JSON.stringify(lotrCitiesArray.join(', '));
+
+kata5.textContent = JSON.stringify(lotrCitiesArray.slice(lotrCitiesArray.length-5));
+
+lotrCitiesArray.splice(2,1);
+kata6.textContent = JSON.stringify(lotrCitiesArray);
+
+kata7.textContent = JSON.stringify(bestThing.slice(23, 38));
+
+var only = bestThing.indexOf('only');
+kata8.textContent = JSON.stringify(only);
+
+var empty = [];
+var cityArr = gotCitiesCSV.split(',');
+for (let i = 0; i < cityArr.length; i ++) {
+    if (cityArr[i].includes('aa') || (cityArr[i].includes('ee'))) {
+        empty.unshift(cityArr[i]);
+    }
+}
+
+kata9.textContent = JSON.stringify(empty);
+
+kata10.textContent = JSON.stringify(lotrCitiesArray.sort());
+
+</script>
+</body>
+</html>
